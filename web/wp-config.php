@@ -233,7 +233,7 @@ define( 'DISALLOW_FILE_EDIT', true );
  * Blocks users being able to use the plugin and theme installation/update functionality
  * from the WordPress admin area. Also disallows the theme and plugin editors
  */
-// define( 'DISALLOW_FILE_MODS', true );
+define( 'DISALLOW_FILE_MODS', true );
 
 /**
  * Allow unfiltered uploads--administrators can upload any file type
@@ -374,6 +374,12 @@ $redis_server = array(
 	'host' => REDIS_URL ? REDIS_HOST : '127.0.0.1',
 	'port' => REDIS_URL ? REDIS_PORT : 6379,
 );
+
+/**
+ * AWS Credentials
+ */
+define( 'DBI_AWS_ACCESS_KEY_ID', getenv( 'AWS_ACCESS_KEY_ID' ) );
+define( 'DBI_AWS_SECRET_ACCESS_KEY', getenv( 'AWS_SECRET_ACCESS_KEY' ) );
 
 /* That's all, stop editing! Happy blogging. */
 
