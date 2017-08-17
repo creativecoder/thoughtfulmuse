@@ -368,11 +368,13 @@ if ( REDIS_URL ) {
 	$redis_url = parse_url( REDIS_URL );
 	define( 'REDIS_HOST', $redis_url['host'] );
 	define( 'REDIS_PORT', $redis_url['port'] );
+	define( 'REDIS_AUTH', $redis_url['pass'] );
 }
 
 $redis_server = array(
 	'host' => REDIS_URL ? REDIS_HOST : '127.0.0.1',
 	'port' => REDIS_URL ? REDIS_PORT : 6379,
+	'auth' => REDIS_URL ? REDIS_AUTH : '',
 );
 
 /**
