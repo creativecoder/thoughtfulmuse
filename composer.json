@@ -33,11 +33,6 @@
     "require-dev": {
         "vlucas/phpdotenv": "^2.4"
     },
-    "scripts": {
-        "post-install-cmd": [
-            "if [ -f /.dockerenv ]; then chmod -R -w web/; fi"
-        ]
-    },
     "extra": {
         "wordpress-install-dir": "web/wp",
         "installer-paths": {

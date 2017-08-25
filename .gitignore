@@ -54,7 +54,8 @@ vendor
 !**/wp-content/themes/index.php
 **/wp-content/plugins/*
 !**/wp-content/plugins/index.php
-**/wp-content/uploads/
+**/wp-content/uploads/*
+!**/wp-content/uploads/.gitkeep
 **/wp-content/blogs.dir/
 **/wp-content/upgrade/
 **/wp-content/backup-db/
