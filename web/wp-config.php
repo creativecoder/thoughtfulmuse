@@ -314,10 +314,10 @@ define( 'DISALLOW_FILE_MODS', true );
  * SSL
  */
 /* Force SSL Login */
-// define( 'FORCE_SSL_LOGIN',true );
+define( 'FORCE_SSL_LOGIN', true );
 
 /* Force SSL for Logins and Admin */
-// define( 'FORCE_SSL_ADMIN',true );
+define( 'FORCE_SSL_ADMIN', true );
 
 /**
  * Auto updating
