@@ -1,5 +1,5 @@
 # thoughtfulmuse
 
-https://thoughtfulmu.se WordPress site, deployed with [Flynn](https://flynn.io/).
+https://thoughtfulmu.se WordPress site, deployed with [Dokku](http://dokku.viewdocs.io/dokku/).
 
-Also works with [dokku](http://dokku.viewdocs.io/dokku/) and [heroku](https://www.heroku.com/).
+Also works with [Flynn](https://flynn.io/) and [heroku](https://www.heroku.com/).
