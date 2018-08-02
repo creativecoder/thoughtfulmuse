@@ -7,10 +7,10 @@
             "email": "hi@grant.mk"
         }
     ],
-    "repositories":[
+    "repositories": [
         {
-            "type":"composer",
-            "url":"https://wpackagist.org"
+            "type": "composer",
+            "url": "https://wpackagist.org"
         }
     ],
     "license": "GPL-3.0",
@@ -20,16 +20,15 @@
         "ext-redis": "*",
         "ext-mbstring": "*",
         "wpackagist-theme/orvis": "*",
-        "wpackagist-plugin/jetpack": "^5.2",
-        "wpackagist-plugin/thesography": "^1.2",
-        "wp-cli/wp-cli": "^1.3",
+        "wpackagist-plugin/jetpack": "^6.3",
+        "wpackagist-plugin/thesography": "^1.3",
+        "wp-cli/wp-cli": "^1.5",
         "wpackagist-plugin/sendgrid-email-delivery-simplified": "^1.11",
-        "wpackagist-plugin/wp-redis": "^0.6.2",
-        "wpackagist-plugin/wordpress-seo": "^5.2",
-        "johnpbloch/wordpress": "^4.8",
-        "wpackagist-plugin/amazon-s3-and-cloudfront": "^1.2",
-        "wpackagist-plugin/amazon-web-services": "^1.0",
-        "wpackagist-plugin/wp-force-ssl": "^1.3"
+        "wpackagist-plugin/wp-redis": "^0.7.0",
+        "wpackagist-plugin/wordpress-seo": "^7.9",
+        "johnpbloch/wordpress": "^4.9",
+        "wpackagist-plugin/amazon-s3-and-cloudfront": "^1.4",
+        "wpackagist-plugin/amazon-web-services": "^1.0"
     },
     "require-dev": {
         "vlucas/phpdotenv": "^2.4"
@@ -37,9 +36,15 @@
     "extra": {
         "wordpress-install-dir": "web/wp",
         "installer-paths": {
-            "web/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-            "web/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-            "web/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+            "web/wp-content/mu-plugins/{$name}/": [
+                "type:wordpress-muplugin"
+            ],
+            "web/wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "web/wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
         }
     }
 }
