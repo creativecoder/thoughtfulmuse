@@ -13,45 +13,36 @@
  * @package WordPress
  */
 
-define( 'PROJECT_ROOT', dirname(__FILE__) . '/../' );
+define( 'PROJECT_ROOT', dirname( dirname( __FILE__ ) ) );
 
 /* Bootstrap composer dependencies, if present */
-if ( file_exists( PROJECT_ROOT . 'vendor/autoload.php' ) ) {
-	require_once( PROJECT_ROOT . 'vendor/autoload.php' );
+if ( file_exists( PROJECT_ROOT . '/vendor/autoload.php' ) ) {
+	require_once( PROJECT_ROOT . '/vendor/autoload.php' );
 }
 
 /**
  * Load environment variables from the .env file with Dotenv, if we're not in a docker environment
  */
-if ( class_exists('Dotenv\Dotenv') && file_exists(PROJECT_ROOT . '.env') ) {
+if ( class_exists( 'Dotenv\Dotenv' ) && file_exists( PROJECT_ROOT . '/.env' ) ) {
 	$dotenv = new Dotenv\Dotenv( PROJECT_ROOT );
 	$dotenv->load();
-	$dotenv->required( ['DB_NAME'] );
+	$dotenv->required( [ 'DB_NAME' ] );
 	$db_name = getenv( 'DB_NAME' );
 
-	// Whether or not we are within the VVV environment
-	if ( 'vvv' !== gethostname() ) {
-		// Allow connected from the host machine (like for running wp-cli locally)
-		$dotenv->required( ['EXTERNAL_DB_USER', 'EXTERNAL_DB_PASSWORD', 'EXTERNAL_DB_HOST', 'EXTERNAL_DB_PORT'] );
-		$db_user = getenv( 'EXTERNAL_DB_USER' );
-		$db_password = getenv( 'EXTERNAL_DB_PASSWORD' );
-		$db_host = getenv( 'EXTERNAL_DB_HOST' ) . ':' . getenv( 'EXTERNAL_DB_PORT' );
-	} else {
-		$dotenv->required( ['DB_USER', 'DB_PASSWORD', 'DB_HOST', 'DB_PORT'] );
-		$db_user = getenv( 'DB_USER' );
-		$db_password = getenv( 'DB_PASSWORD' );
-		$db_host = getenv( 'DB_HOST' ) . ':' . getenv( 'DB_PORT' );
-	}
+	$dotenv->required( [ 'DB_USER', 'DB_PASSWORD', 'DB_HOST', 'DB_PORT' ] );
+	$db_user     = getenv( 'DB_USER' );
+	$db_password = getenv( 'DB_PASSWORD' );
+	$db_host     = getenv( 'DB_HOST' ) . ':' . getenv( 'DB_PORT' );
 } else {
 	define( 'DATABASE_URL', getenv( 'DATABASE_URL' ) );
 
 	if ( DATABASE_URL ) {
 		$database_url = parse_url( DATABASE_URL );
 
-		$db_name = trim( $database_url['path'], '/' );
-		$db_user = $database_url['user'];
+		$db_name     = trim( $database_url['path'], '/' );
+		$db_user     = $database_url['user'];
 		$db_password = $database_url['pass'];
-		$db_host = $database_url['host'] . ':' . $database_url['port'];
+		$db_host     = $database_url['host'] . ':' . $database_url['port'];
 	}
 }
 
@@ -60,8 +51,8 @@ define( 'DB_USER', $db_user );
 define( 'DB_PASSWORD', $db_password );
 define( 'DB_HOST', $db_host );
 
-// What environment are we in?	
-define( 'WP_ENV', getenv('WP_ENV') );
+// What environment are we in?
+define( 'WP_ENV', getenv( 'WP_ENV' ) );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
@@ -83,7 +74,7 @@ $table_prefix = 'wp_';
 if ( 'local' === WP_ENV ) {
 	define( 'WP_DEBUG', true );
 	define( 'WP_CACHE', false );
-	define ( 'JETPACK_DEV_DEBUG', true );
+	define( 'JETPACK_DEV_DEBUG', true );
 } else {
 	define( 'WP_DEBUG', false );
 	// use advanced-cache.php for production
@@ -92,10 +83,10 @@ if ( 'local' === WP_ENV ) {
 
 if ( WP_DEBUG ) {
 
-	// Custom logging function
-	if(!function_exists('log_me')){
+	// Custom logging function.
+	if ( ! function_exists( 'log_me' ) ) {
 		function log_me( $message ) {
-			if( is_array( $message ) || is_object( $message ) ){
+			if ( is_array( $message ) || is_object( $message ) ) {
 				error_log( print_r( $message, true ) );
 			} else {
 				error_log( $message );
@@ -105,7 +96,7 @@ if ( WP_DEBUG ) {
 
 	/*
 	 * This will log all errors notices and warnings to a file called debug.log in
-	 * wp-content only when WP_DEBUG is true. if Apache does not have write permission, 
+	 * wp-content only when WP_DEBUG is true. if Apache does not have write permission,
 	 * you may need to create the file first and set the appropriate permissions (i.e. use 644).
 	 */
 	define( 'WP_DEBUG_LOG', true );
@@ -354,12 +345,13 @@ define( 'AUTOMATIC_UPDATER_DISABLED', true );
  * SSL Configuration: we need to tell WordPress that we're using SSL, since it's handled by
  * a reverse proxy through docker and nginx
  */
-if ( isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
-	$_SERVER['HTTPS']='on';
+if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
+	$_SERVER['HTTPS'] = 'on';
 }
 
 /**
  * Redis Caching
+ *
  * @link https://wordpress.org/plugins/wp-redis
  */
 define( 'REDIS_URL', getenv( 'REDIS_URL' ) );
@@ -386,8 +378,9 @@ define( 'DBI_AWS_SECRET_ACCESS_KEY', getenv( 'AWS_SECRET_ACCESS_KEY' ) );
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
-if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
+}
 
 /** Sets up WordPress vars and included files. */
-require_once(ABSPATH . 'wp-settings.php');
+require_once ABSPATH . 'wp-settings.php';
