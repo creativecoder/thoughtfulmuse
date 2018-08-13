@@ -29,7 +29,7 @@
         "johnpbloch/wordpress": "^4.9",
         "wpackagist-plugin/amazon-s3-and-cloudfront": "^1.4",
         "wpackagist-plugin/amazon-web-services": "^1.0",
-        "wpackagist-plugin/nginx-helper": "^1.9"
+        "wpackagist-plugin/pj-page-cache-red": "^0.8.3"
     },
     "require-dev": {
         "vlucas/phpdotenv": "^2.4"

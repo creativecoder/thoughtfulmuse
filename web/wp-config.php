@@ -382,5 +382,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
 }
 
+/* Redis page caching */
+require_once PROJECT_ROOT . '/web/redis-page-cache-config.php';
+
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';

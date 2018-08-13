@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a6341a38d92598ea0e240e8ffb42eebf",
+    "content-hash": "992ec3f2a163d8a3c531a650acc9205e",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -3536,16 +3536,16 @@
             "homepage": "https://wordpress.org/plugins/jetpack/"
         },
         {
-            "name": "wpackagist-plugin/nginx-helper",
-            "version": "1.9.11",
+            "name": "wpackagist-plugin/pj-page-cache-red",
+            "version": "0.8.3",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/nginx-helper/",
-                "reference": "tags/1.9.11"
+                "url": "https://plugins.svn.wordpress.org/pj-page-cache-red/",
+                "reference": "tags/0.8.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/nginx-helper.1.9.11.zip",
+                "url": "https://downloads.wordpress.org/plugin/pj-page-cache-red.0.8.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -3553,7 +3553,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/nginx-helper/"
+            "homepage": "https://wordpress.org/plugins/pj-page-cache-red/"
         },
         {
             "name": "wpackagist-plugin/sendgrid-email-delivery-simplified",
