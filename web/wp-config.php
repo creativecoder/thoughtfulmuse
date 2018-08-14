@@ -249,7 +249,7 @@ define( 'DISALLOW_FILE_MODS', true );
 // If disabling WP_CRON, set a cron job like `*/5 * * * * curl http://example.com/wp/wp-cron.php` in your server's crontab file
 
 /* Disable cron entirely */
-// define( 'DISABLE_WP_CRON',true );
+define( 'DISABLE_WP_CRON', true );
 
 /* Make sure a cron process cannot run more than once every so many seconds */
 // define( 'WP_CRON_LOCK_TIMEOUT',60 );
