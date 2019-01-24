@@ -16,7 +16,7 @@
     "license": "GPL-3.0",
     "minimum-stability": "stable",
     "require": {
-        "php": "^7.2",
+        "php": "^7.3",
         "ext-redis": "^4.1",
         "ext-mbstring": "^7.2",
         "ext-exif": "^7.2",
