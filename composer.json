@@ -26,7 +26,7 @@
         "wpackagist-plugin/sendgrid-email-delivery-simplified": "^1.11",
         "wpackagist-plugin/wp-redis": "^0.7.0",
         "wpackagist-plugin/wordpress-seo": "^8.0",
-        "johnpbloch/wordpress": "^4.9",
+        "johnpbloch/wordpress": "^5.0.0",
         "wpackagist-plugin/amazon-s3-and-cloudfront": "^1.4",
         "wpackagist-plugin/amazon-web-services": "^1.0",
         "wpackagist-plugin/pj-page-cache-red": "^0.8.3",
