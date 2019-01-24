@@ -34,7 +34,7 @@
         "ext-gd": "^7.2"
     },
     "require-dev": {
-        "vlucas/phpdotenv": "^3.0.0"
+        "vlucas/phpdotenv": "3.2.0"
     },
     "extra": {
         "wordpress-install-dir": "web/wp",
