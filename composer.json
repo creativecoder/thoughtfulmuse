@@ -34,7 +34,7 @@
         "wp-cli/wp-cli": "^2.2"
     },
     "require-dev": {
-        "vlucas/phpdotenv": "^3.3.3"
+        "vlucas/phpdotenv": "^3.4.0"
     },
     "extra": {
         "wordpress-install-dir": "web/wp",
