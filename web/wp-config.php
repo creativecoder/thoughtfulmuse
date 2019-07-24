@@ -17,19 +17,17 @@ define( 'PROJECT_ROOT', dirname( dirname( __FILE__ ) ) );
 
 /* Bootstrap composer dependencies, if present */
 if ( file_exists( PROJECT_ROOT . '/vendor/autoload.php' ) ) {
-	require_once( PROJECT_ROOT . '/vendor/autoload.php' );
+	require_once PROJECT_ROOT . '/vendor/autoload.php';
 }
 
 /**
  * Load environment variables from the .env file with Dotenv, if we're not in a docker environment
  */
 if ( class_exists( 'Dotenv\Dotenv' ) && file_exists( PROJECT_ROOT . '/.env' ) ) {
-	$dotenv = new Dotenv\Dotenv( PROJECT_ROOT );
+	$dotenv = Dotenv\Dotenv::create( PROJECT_ROOT );
 	$dotenv->load();
-	$dotenv->required( [ 'DB_NAME' ] );
-	$db_name = getenv( 'DB_NAME' );
-
-	$dotenv->required( [ 'DB_USER', 'DB_PASSWORD', 'DB_HOST', 'DB_PORT' ] );
+	$dotenv->required( [ 'DB_NAME', 'DB_USER', 'DB_PASSWORD', 'DB_HOST', 'DB_PORT' ] );
+	$db_name     = getenv( 'DB_NAME' );
 	$db_user     = getenv( 'DB_USER' );
 	$db_password = getenv( 'DB_PASSWORD' );
 	$db_host     = getenv( 'DB_HOST' ) . ':' . getenv( 'DB_PORT' );
@@ -58,18 +56,16 @@ define( 'WP_ENV', getenv( 'WP_ENV' ) );
 define( 'DB_CHARSET', 'utf8' );
 
 /** The Database Collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '') ;
+define( 'DB_COLLATE', '' );
 
-define( 'AUTH_KEY',         getenv('AUTH_KEY') );
-define( 'SECURE_AUTH_KEY',  getenv('SECURE_AUTH_KEY') );
-define( 'LOGGED_IN_KEY',    getenv('LOGGED_IN_KEY') );
-define( 'NONCE_KEY',        getenv('NONCE_KEY') );
-define( 'AUTH_SALT',        getenv('AUTH_SALT') );
-define( 'SECURE_AUTH_SALT', getenv('SECURE_AUTH_SALT') );
-define( 'LOGGED_IN_SALT',   getenv('LOGGED_IN_SALT') );
-define( 'NONCE_SALT',       getenv('NONCE_SALT') );
-
-$table_prefix = 'wp_';
+define( 'AUTH_KEY', getenv( 'AUTH_KEY' ) );
+define( 'SECURE_AUTH_KEY', getenv( 'SECURE_AUTH_KEY' ) );
+define( 'LOGGED_IN_KEY', getenv( 'LOGGED_IN_KEY' ) );
+define( 'NONCE_KEY', getenv( 'NONCE_KEY' ) );
+define( 'AUTH_SALT', getenv( 'AUTH_SALT' ) );
+define( 'SECURE_AUTH_SALT', getenv( 'SECURE_AUTH_SALT' ) );
+define( 'LOGGED_IN_SALT', getenv( 'LOGGED_IN_SALT' ) );
+define( 'NONCE_SALT', getenv( 'NONCE_SALT' ) );
 
 if ( 'local' === WP_ENV ) {
 	define( 'WP_DEBUG', true );
@@ -77,12 +73,11 @@ if ( 'local' === WP_ENV ) {
 	define( 'JETPACK_DEV_DEBUG', true );
 } else {
 	define( 'WP_DEBUG', false );
-	// use advanced-cache.php for production
+	// Use advanced-cache.php for production.
 	define( 'WP_CACHE', true );
 }
 
 if ( WP_DEBUG ) {
-
 	// Custom logging function.
 	if ( ! function_exists( 'log_me' ) ) {
 		function log_me( $message ) {
