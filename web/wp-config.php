@@ -366,6 +366,8 @@ $redis_server = array(
 	'auth' => REDIS_URL ? REDIS_AUTH : '',
 );
 
+define( 'WP_CACHE_KEY_SALT', getenv( 'WP_CACHE_KEY_SALT' ) );
+
 /**
  * AWS Credentials
  */
