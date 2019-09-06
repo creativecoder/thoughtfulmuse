@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "af76b2d586ca5177dbcca4120feab956",
+    "content-hash": "fa586c3385bb1ae8b91dd139f6a4a693",
     "packages": [
         {
             "name": "composer/installers",
@@ -481,13 +481,13 @@
             "authors": [
                 {
                     "name": "James Logsdon",
-                    "email": "jlogsdon@php.net",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "jlogsdon@php.net"
                 },
                 {
                     "name": "Daniel Bachhuber",
-                    "email": "daniel@handbuilt.co",
-                    "role": "Maintainer"
+                    "role": "Maintainer",
+                    "email": "daniel@handbuilt.co"
                 }
             ],
             "description": "Console utilities for PHP",
@@ -602,15 +602,15 @@
         },
         {
             "name": "wpackagist-plugin/jetpack",
-            "version": "7.7",
+            "version": "7.7.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/jetpack/",
-                "reference": "tags/7.7"
+                "reference": "tags/7.7.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/jetpack.7.7.zip",
+                "url": "https://downloads.wordpress.org/plugin/jetpack.7.7.1.zip",
                 "reference": null,
                 "shasum": null
             },
