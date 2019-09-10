@@ -35,7 +35,7 @@
         "johnpbloch/wordpress-core": "^5.2"
     },
     "require-dev": {
-        "vlucas/phpdotenv": "^3.5.0"
+        "vlucas/phpdotenv": "^3.6.0"
     },
     "extra": {
         "wordpress-install-dir": "web/wp",
