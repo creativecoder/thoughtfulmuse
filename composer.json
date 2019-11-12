@@ -27,7 +27,7 @@
         "wpackagist-plugin/sendgrid-email-delivery-simplified": "^1.11",
         "wpackagist-plugin/wp-redis": "^0.7.1",
         "wpackagist-plugin/wordpress-seo": "^12.4.0",
-        "wpackagist-plugin/amazon-s3-and-cloudfront": "^2.2",
+        "wpackagist-plugin/amazon-s3-and-cloudfront": "^2.3",
         "wpackagist-plugin/amazon-web-services": "^1.0",
         "wpackagist-plugin/pj-page-cache-red": "^0.8.3",
         "wpackagist-theme/orvis": "*",
