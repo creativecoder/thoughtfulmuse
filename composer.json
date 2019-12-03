@@ -35,7 +35,7 @@
         "ext-json": "^1.7"
     },
     "require-dev": {
-        "vlucas/phpdotenv": "^3.6.0"
+        "vlucas/phpdotenv": "^4.0.0"
     },
     "extra": {
         "wordpress-install-dir": "web/wp",
