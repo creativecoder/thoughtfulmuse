@@ -16,7 +16,7 @@ jobs:
         mkdir $HOME/.ssh
         chmod 700 $HOME/.ssh
         ssh-keyscan grant.mk >> $HOME/.ssh/known_hosts
-        echo ${{ secrets.DEPLOY_PRIVATE_KEY }} > $HOME/.ssh/id_rsa
+        echo '${{ secrets.DEPLOY_PRIVATE_KEY }}' > $HOME/.ssh/id_rsa
         chmod 600 $HOME/.ssh/id_rsa
     - name: Prepare git repo
       run: |
