@@ -18,10 +18,9 @@ jobs:
         ssh-keyscan grant.mk >> $HOME/.ssh/known_hosts
         echo '${{ secrets.DEPLOY_PRIVATE_KEY }}' > $HOME/.ssh/id_rsa
         chmod 600 $HOME/.ssh/id_rsa
-    - name: Prepare git repo
+    - name: Clone git repo and push to production
       run: |
         git clone https://github.com/creativecoder/thoughtfulmuse.git
         cd thoughtfulmuse
         git remote add dokku ${{ secrets.DEPLOY_REPO }}
-    - name: Push to production
-      run: git push dokku master
+        git push dokku master
