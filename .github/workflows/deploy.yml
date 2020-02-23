@@ -17,8 +17,8 @@ jobs:
     steps:
     - name: Deploy
       run: |
-        mkdir /root/.ssh
-        chmod 700 /root/.ssh
+        mkdir $HOME/.ssh
+        chmod 700 $HOME/.ssh
         ssh-keyscan -t rsa grant.mk > /root/.ssh/known_hosts
         echo ${{ secrets.DEPLOY_PRIVATE_KEY }} > /root/.ssh/id_rsa
         chmod 600 /root/.ssh/id_rsa
