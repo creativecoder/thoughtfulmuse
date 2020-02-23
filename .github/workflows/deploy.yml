@@ -11,15 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Deploy
+    - name: Prepare ssh key
       run: |
         mkdir $HOME/.ssh
         chmod 700 $HOME/.ssh
         ssh-keyscan grant.mk >> $HOME/.ssh/known_hosts
         echo ${{ secrets.DEPLOY_PRIVATE_KEY }} > $HOME/.ssh/id_rsa
         chmod 600 $HOME/.ssh/id_rsa
+    - name: Prepare git repo
+      run: |
         git clone https://github.com/creativecoder/thoughtfulmuse.git
         cd thoughtfulmuse
         git remote add dokku ${{ secrets.DEPLOY_REPO }}
-        git push dokku master
-        
+    - name: Push to production
+      run: git push dokku master
