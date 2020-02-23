@@ -15,7 +15,7 @@ jobs:
       run: |
         mkdir $HOME/.ssh
         chmod 700 $HOME/.ssh
-        ssh-keyscan -t rsa grant.mk > $HOME/.ssh/known_hosts
+        ssh-keyscan grant.mk >> $HOME/.ssh/known_hosts
         echo ${{ secrets.DEPLOY_PRIVATE_KEY }} > $HOME/.ssh/id_rsa
         chmod 600 $HOME/.ssh/id_rsa
         git clone https://github.com/creativecoder/thoughtfulmuse.git
