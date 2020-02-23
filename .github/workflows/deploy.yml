@@ -19,9 +19,9 @@ jobs:
       run: |
         mkdir $HOME/.ssh
         chmod 700 $HOME/.ssh
-        ssh-keyscan -t rsa grant.mk > /root/.ssh/known_hosts
-        echo ${{ secrets.DEPLOY_PRIVATE_KEY }} > /root/.ssh/id_rsa
-        chmod 600 /root/.ssh/id_rsa
+        ssh-keyscan -t rsa grant.mk > $HOME/.ssh/known_hosts
+        echo ${{ secrets.DEPLOY_PRIVATE_KEY }} > $HOME/.ssh/id_rsa
+        chmod 600 $HOME/.ssh/id_rsa
         git clone https://github.com/creativecoder/thoughtfulmuse.git
         cd thoughtfulmuse
         git remote add dokku ${{ secrets.DEPLOY_REPO }}
