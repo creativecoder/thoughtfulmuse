@@ -1,0 +1,29 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [closed]
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy
+      run: |
+        mkdir /root/.ssh
+        chmod 700 /root/.ssh
+        ssh-keyscan -t rsa grant.mk > /root/.ssh/known_hosts
+        echo ${{ secrets.DEPLOY_PRIVATE_KEY }} > /root/.ssh/id_rsa
+        chmod 600 /root/.ssh/id_rsa
+        git clone https://github.com/creativecoder/thoughtfulmuse.git
+        cd thoughtfulmuse
+        git remote add dokku ${{ secrets.DEPLOY_REPO }}
+        git push dokku master
+        
