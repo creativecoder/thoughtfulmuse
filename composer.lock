@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed41fa7febe8a87a0922af4ab6768b48",
+    "content-hash": "1902515c4f298e948a5a3fd81b2ccb49",
     "packages": [
         {
             "name": "composer/installers",
@@ -672,15 +672,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "13.2",
+            "version": "13.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/13.2"
+                "reference": "tags/13.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.13.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.13.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -899,6 +899,12 @@
                 "env",
                 "environment"
             ],
+            "funding": [
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/vlucas/phpdotenv",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-03-12T13:44:15+00:00"
         }
     ],
@@ -915,5 +921,6 @@
         "ext-mbstring": "^7.4",
         "ext-redis": "^5.1"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
