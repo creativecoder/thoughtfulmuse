@@ -27,7 +27,7 @@
         "wpackagist-plugin/thesography": "^1.3",
         "wpackagist-plugin/sendgrid-email-delivery-simplified": "^1.11",
         "wpackagist-plugin/wp-redis": "^1.0.1",
-        "wpackagist-plugin/wordpress-seo": "^14.1.0",
+        "wpackagist-plugin/wordpress-seo": "^14.2.0",
         "wpackagist-plugin/amazon-s3-and-cloudfront": "^2.3",
         "wpackagist-plugin/amazon-web-services": "^1.0",
         "wpackagist-plugin/pj-page-cache-red": "^0.8.3",
