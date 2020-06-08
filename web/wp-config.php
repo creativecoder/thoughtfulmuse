@@ -24,13 +24,17 @@ if ( file_exists( PROJECT_ROOT . '/vendor/autoload.php' ) ) {
  * Load environment variables from the .env file with Dotenv, if we're not in a docker environment
  */
 if ( class_exists( 'Dotenv\Dotenv' ) && file_exists( PROJECT_ROOT . '/.env' ) ) {
-	$dotenv = Dotenv\Dotenv::create( PROJECT_ROOT );
+	$dotenv_repository = Dotenv\Repository\RepositoryBuilder::createWithDefaultAdapters()
+		->immutable()
+		->make();
+
+	$dotenv = Dotenv\Dotenv::create( $dotenv_repository, PROJECT_ROOT );
 	$dotenv->load();
-	$dotenv->required( [ 'DB_NAME', 'DB_USER', 'DB_PASSWORD', 'DB_HOST', 'DB_PORT' ] );
-	$db_name     = getenv( 'DB_NAME' );
-	$db_user     = getenv( 'DB_USER' );
-	$db_password = getenv( 'DB_PASSWORD' );
-	$db_host     = getenv( 'DB_HOST' ) . ':' . getenv( 'DB_PORT' );
+	$dotenv->required( array( 'DB_NAME', 'DB_USER', 'DB_PASSWORD', 'DB_HOST', 'DB_PORT' ) );
+	$db_name     = $_ENV['DB_NAME'];
+	$db_user     = $_ENV['DB_USER'];
+	$db_password = $_ENV['DB_PASSWORD'];
+	$db_host     = $_ENV['DB_HOST'] . ':' . $_ENV['DB_PORT'];
 } else {
 	define( 'DATABASE_URL', getenv( 'DATABASE_URL' ) );
 
