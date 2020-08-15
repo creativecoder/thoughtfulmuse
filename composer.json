@@ -32,7 +32,7 @@
         "wpackagist-plugin/pj-page-cache-red": "^0.8.3",
         "wpackagist-theme/orvis": "*",
         "wp-cli/wp-cli": "^2.4",
-        "johnpbloch/wordpress": "^5.4"
+        "johnpbloch/wordpress": "^5.5"
     },
     "require-dev": {
         "vlucas/phpdotenv": "^5.1.0"
