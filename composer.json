@@ -32,7 +32,7 @@
         "wpackagist-theme/orvis": "*",
         "wp-cli/wp-cli": "^2.4",
         "johnpbloch/wordpress": "^5.6",
-        "wpackagist-plugin/jetpack": "^9.4"
+        "wpackagist-plugin/jetpack": "^9.5"
     },
     "require-dev": {
         "vlucas/phpdotenv": "^5.3.0"
