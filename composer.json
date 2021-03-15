@@ -31,7 +31,7 @@
         "wpackagist-plugin/pj-page-cache-red": "^0.8.3",
         "wpackagist-theme/orvis": "*",
         "wp-cli/wp-cli": "^2.4",
-        "johnpbloch/wordpress": "^5.6",
+        "johnpbloch/wordpress": "^5.7",
         "wpackagist-plugin/jetpack": "^9.5"
     },
     "require-dev": {
