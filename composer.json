@@ -24,7 +24,7 @@
         "ext-redis": "^5.1",
         "wpackagist-plugin/thesography": "^1.3",
         "wpackagist-plugin/sendgrid-email-delivery-simplified": "^1.11",
-        "wpackagist-plugin/wp-redis": "1.1.1",
+        "wpackagist-plugin/wp-redis": "1.1.2",
         "wpackagist-plugin/wordpress-seo": "^16.0.2",
         "wpackagist-plugin/amazon-s3-and-cloudfront": "^2.5",
         "wpackagist-plugin/amazon-web-services": "^1.0",
