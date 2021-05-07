@@ -24,11 +24,7 @@ if ( file_exists( PROJECT_ROOT . '/vendor/autoload.php' ) ) {
  * Load environment variables from the .env file with Dotenv, if we're not in a docker environment
  */
 if ( class_exists( 'Dotenv\Dotenv' ) && file_exists( PROJECT_ROOT . '/.env' ) ) {
-	$dotenv_repository = Dotenv\Repository\RepositoryBuilder::createWithDefaultAdapters()
-		->immutable()
-		->make();
-
-	$dotenv = Dotenv\Dotenv::create( $dotenv_repository, PROJECT_ROOT );
+	$dotenv = Dotenv\Dotenv::createUnsafeImmutable( PROJECT_ROOT );
 	$dotenv->load();
 	$dotenv->required( array( 'DB_NAME', 'DB_USER', 'DB_PASSWORD', 'DB_HOST', 'DB_PORT' ) );
 	$db_name     = $_ENV['DB_NAME'];
@@ -85,8 +81,8 @@ if ( 'local' === WP_ENV ) {
 
 if ( WP_DEBUG ) {
 	// Custom logging function.
-	if ( ! function_exists( 'log_me' ) ) {
-		function log_me( $message ) {
+	if ( ! function_exists( 'l' ) ) {
+		function l( $message ) {
 			if ( is_array( $message ) || is_object( $message ) ) {
 				error_log( print_r( $message, true ) );
 			} else {
@@ -225,7 +221,7 @@ define( 'DISALLOW_FILE_EDIT', true );
  * Blocks users being able to use the plugin and theme installation/update functionality
  * from the WordPress admin area. Also disallows the theme and plugin editors
  */
-define( 'DISALLOW_FILE_MODS', true );
+define( 'DISALLOW_FILE_MODS', WP_ENV !== 'local' );
 
 /**
  * Allow unfiltered uploads--administrators can upload any file type
