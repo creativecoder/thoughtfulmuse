@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d3173733bba75353881f985ea252b810",
+    "content-hash": "e1258578ddbb65f04ca8ac09e5cf6281",
     "packages": [
         {
             "name": "composer/installers",
@@ -761,18 +761,18 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "17.0",
+            "version": "17.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/17.0"
+                "reference": "tags/17.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.17.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.17.1.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wordpress-seo/"
