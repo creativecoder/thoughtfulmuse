@@ -35,7 +35,7 @@
         "wpackagist-plugin/jetpack": "^10.4"
     },
     "require-dev": {
-        "vlucas/phpdotenv": "^5.4.0"
+        "vlucas/phpdotenv": "^5.4.1"
     },
     "extra": {
         "wordpress-install-dir": "web/wp",
