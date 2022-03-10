@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9fc69958103ac8e03ae10ee511d94c17",
+    "content-hash": "2eede7aa8d3f624daa2a86e99c4f42f6",
     "packages": [
         {
             "name": "composer/installers",
@@ -885,24 +885,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/thesography/"
-        },
-        {
-            "name": "wpackagist-plugin/wordpress-seo",
-            "version": "18.2",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/18.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.18.2.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wordpress-seo/"
         },
         {
             "name": "wpackagist-plugin/wp-mail-smtp",
