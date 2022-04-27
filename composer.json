@@ -31,7 +31,7 @@
         "wp-cli/wp-cli": "^2.6",
         "johnpbloch/wordpress": "^5.9",
         "wpackagist-plugin/jetpack": "^10.8",
-        "wpackagist-plugin/wp-mail-smtp": "^3.3"
+        "wpackagist-plugin/wp-mail-smtp": "^3.4"
     },
     "require-dev": {
         "vlucas/phpdotenv": "^5.4.1"
