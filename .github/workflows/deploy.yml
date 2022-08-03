@@ -1,26 +1,23 @@
-name: Deploy
+---
+name: "deploy"
 
+# yamllint disable-line rule:truthy
 on:
   push:
     branches:
-      - master
+      - trunk
 
 jobs:
-  build:
-
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Prepare ssh key
-      run: |
-        mkdir $HOME/.ssh
-        chmod 700 $HOME/.ssh
-        ssh-keyscan grant.mk >> $HOME/.ssh/known_hosts
-        echo '${{ secrets.DEPLOY_PRIVATE_KEY }}' > $HOME/.ssh/id_rsa
-        chmod 600 $HOME/.ssh/id_rsa
-    - name: Clone git repo and push to production
-      run: |
-        git clone https://github.com/creativecoder/thoughtfulmuse.git
-        cd thoughtfulmuse
-        git remote add dokku ${{ secrets.DEPLOY_REPO }}
-        git push dokku master
+      - name: Cloning repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Push to dokku
+        uses: dokku/github-action@master
+        with:
+          git_remote_url: ${{ secrets.DEPLOY_REPO }}
+          ssh_private_key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
