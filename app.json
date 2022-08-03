@@ -1,4 +1,10 @@
 {
+  "cron": [
+    {
+      "command": "php /app/web/wp/wp-cron.php",
+      "schedule": "*/10 * * * *"
+    }
+  ],
   "scripts": {
     "dokku": {
       "predeploy": "find web -not -path 'web/wp-content/uploads*' -exec chmod -w {} +"
