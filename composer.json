@@ -33,7 +33,7 @@
         "wpackagist-plugin/wp-mail-smtp": "^3.6"
     },
     "require-dev": {
-        "vlucas/phpdotenv": "^5.4.1"
+        "vlucas/phpdotenv": "^5.5.0"
     },
     "extra": {
         "wordpress-install-dir": "web/wp",
