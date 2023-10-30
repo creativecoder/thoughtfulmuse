@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53361d0bae288a89ee4ff188f0dc2d8d",
+    "content-hash": "decec65527262641f6267d1f602ae88e",
     "packages": [
         {
             "name": "composer/installers",
@@ -463,16 +463,16 @@
         },
         {
             "name": "wp-cli/php-cli-tools",
-            "version": "v0.11.18",
+            "version": "v0.11.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/php-cli-tools.git",
-                "reference": "0f503a790698cb36cf835e5c8d09cd4b64bf2325"
+                "reference": "b3457a8d60cd0b1c48cab76ad95df136d266f0b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/php-cli-tools/zipball/0f503a790698cb36cf835e5c8d09cd4b64bf2325",
-                "reference": "0f503a790698cb36cf835e5c8d09cd4b64bf2325",
+                "url": "https://api.github.com/repos/wp-cli/php-cli-tools/zipball/b3457a8d60cd0b1c48cab76ad95df136d266f0b6",
+                "reference": "b3457a8d60cd0b1c48cab76ad95df136d266f0b6",
                 "shasum": ""
             },
             "require": {
@@ -480,7 +480,7 @@
             },
             "require-dev": {
                 "roave/security-advisories": "dev-latest",
-                "wp-cli/wp-cli-tests": "^3.1.6"
+                "wp-cli/wp-cli-tests": "^4"
             },
             "type": "library",
             "extra": {
@@ -520,22 +520,22 @@
             ],
             "support": {
                 "issues": "https://github.com/wp-cli/php-cli-tools/issues",
-                "source": "https://github.com/wp-cli/php-cli-tools/tree/v0.11.18"
+                "source": "https://github.com/wp-cli/php-cli-tools/tree/v0.11.21"
             },
-            "time": "2023-04-04T16:03:53+00:00"
+            "time": "2023-09-29T15:28:10+00:00"
         },
         {
             "name": "wp-cli/wp-cli",
-            "version": "v2.8.1",
+            "version": "v2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/wp-cli.git",
-                "reference": "5dd2340b9a01c3cfdbaf5e93a140759fdd190eee"
+                "reference": "8a3befba2d947fbf5cc6d1941edf2dd99da4d4b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/5dd2340b9a01c3cfdbaf5e93a140759fdd190eee",
-                "reference": "5dd2340b9a01c3cfdbaf5e93a140759fdd190eee",
+                "url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/8a3befba2d947fbf5cc6d1941edf2dd99da4d4b7",
+                "reference": "8a3befba2d947fbf5cc6d1941edf2dd99da4d4b7",
                 "shasum": ""
             },
             "require": {
@@ -552,7 +552,7 @@
                 "wp-cli/entity-command": "^1.2 || ^2",
                 "wp-cli/extension-command": "^1.1 || ^2",
                 "wp-cli/package-command": "^1 || ^2",
-                "wp-cli/wp-cli-tests": "^3.1.6"
+                "wp-cli/wp-cli-tests": "^4.0.1"
             },
             "suggest": {
                 "ext-readline": "Include for a better --prompt implementation",
@@ -592,7 +592,7 @@
                 "issues": "https://github.com/wp-cli/wp-cli/issues",
                 "source": "https://github.com/wp-cli/wp-cli"
             },
-            "time": "2023-06-05T06:55:55+00:00"
+            "time": "2023-10-25T09:06:37+00:00"
         },
         {
             "name": "wpackagist-plugin/amazon-s3-and-cloudfront",
@@ -1026,16 +1026,16 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.27.0",
+            "version": "v1.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936"
+                "reference": "6caa57379c4aec19c0a12a38b59b26487dcfe4b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936",
-                "reference": "7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/6caa57379c4aec19c0a12a38b59b26487dcfe4b5",
+                "reference": "6caa57379c4aec19c0a12a38b59b26487dcfe4b5",
                 "shasum": ""
             },
             "require": {
@@ -1044,7 +1044,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.27-dev"
+                    "dev-main": "1.28-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -1089,7 +1089,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.27.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.28.0"
             },
             "funding": [
                 {
@@ -1105,7 +1105,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-03T14:55:06+00:00"
+            "time": "2023-01-26T09:26:14+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
