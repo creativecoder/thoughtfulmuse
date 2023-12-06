@@ -19,6 +19,7 @@ jobs:
       - name: Push to dokku
         uses: dokku/github-action@master
         with:
+          branch: trunk
           # ssh://dokku@dokku.me:22/appname
           git_remote_url: ${{ secrets.DEPLOY_REPO }}
           ssh_private_key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
