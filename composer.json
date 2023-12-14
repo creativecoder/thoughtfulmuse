@@ -16,7 +16,7 @@
     "license": "GPL-3.0",
     "minimum-stability": "stable",
     "require": {
-        "php": "8.2.*",
+        "php": "8.3.*",
         "ext-exif": "8.2.*",
         "ext-gd": "8.2.*",
         "ext-json": "8.2.*",
