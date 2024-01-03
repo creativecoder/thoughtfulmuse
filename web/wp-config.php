@@ -374,6 +374,19 @@ define( 'WP_CACHE_KEY_SALT', getenv( 'WP_CACHE_KEY_SALT' ) );
 define( 'DBI_AWS_ACCESS_KEY_ID', getenv( 'AWS_ACCESS_KEY_ID' ) );
 define( 'DBI_AWS_SECRET_ACCESS_KEY', getenv( 'AWS_SECRET_ACCESS_KEY' ) );
 
+/**
+ * SMTP Configuration
+ */
+define( 'SMTP_USER', getenv( 'SMTP_USER' ) );
+define( 'SMTP_PASS', getenv( 'SMTP_PASS' ) );
+define( 'SMTP_HOST', getenv( 'SMTP_HOST' ) );
+define( 'SMTP_FROM', getenv( 'SMTP_FROM' ) );
+define( 'SMTP_NAME', getenv( 'SMTP_NAME' ) );
+define( 'SMTP_PORT', getenv( 'SMTP_PORT' ) );
+define( 'SMTP_SECURE', getenv( 'SMTP_SECURE' ) );
+define( 'SMTP_AUTH', getenv( 'SMTP_AUTH' ) );
+define( 'SMTP_DEBUG', getenv( 'SMTP_DEBUG' ) );
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
