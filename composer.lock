@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e39384ad2ddcab80f4a3d4f6aaaaa46",
+    "content-hash": "c222c75ef131a212680dcc53e57d0460",
     "packages": [
         {
             "name": "composer/installers",
@@ -599,15 +599,15 @@
         },
         {
             "name": "wpackagist-plugin/amazon-s3-and-cloudfront",
-            "version": "3.2.5",
+            "version": "3.2.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/amazon-s3-and-cloudfront/",
-                "reference": "tags/3.2.5"
+                "reference": "tags/3.2.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.3.2.5.zip"
+                "url": "https://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.3.2.6.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -668,24 +668,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/thesography/"
-        },
-        {
-            "name": "wpackagist-plugin/wp-mail-smtp",
-            "version": "3.11.0",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wp-mail-smtp/",
-                "reference": "tags/3.11.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.3.11.0.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wp-mail-smtp/"
         },
         {
             "name": "wpackagist-plugin/wp-redis",
