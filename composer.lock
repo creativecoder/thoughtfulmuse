@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d8a4bba61d97203cba9df41efb720a32",
+    "content-hash": "0c65325593429938824186e50cc09664",
     "packages": [
         {
             "name": "composer/installers",
@@ -655,15 +655,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-redis",
-            "version": "1.4.6",
+            "version": "1.4.7",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-redis/",
-                "reference": "tags/1.4.6"
+                "reference": "tags/1.4.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-redis.1.4.6.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-redis.1.4.7.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1166,5 +1166,5 @@
         "ext-redis": "^6.0"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
