@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "40c37103c6d7e924176655c42aea7d4b",
+    "content-hash": "131647ddefb552bb3880b0ad298b83b5",
     "packages": [
         {
             "name": "composer/installers",
@@ -601,15 +601,15 @@
         },
         {
             "name": "wpackagist-plugin/amazon-s3-and-cloudfront",
-            "version": "3.3.1",
+            "version": "3.4.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/amazon-s3-and-cloudfront/",
-                "reference": "tags/3.3.1"
+                "reference": "tags/3.4.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.3.3.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.3.4.2.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
